@@ -117,7 +117,7 @@ Di seguito un riepilogo delle funzionalità offerte dal software:
 * Possibilità di caricare nuovi esercizi
 * Creazione nuove schede
 * Caricamento e modifica schede esistenti
-* Gestione scheda (Max 4 giornate)
+* Gestione scheda (Max 3 giornate)
 	* Nome esercizio
 	* Numero ripetizioni
 	* Tempo di riposo
@@ -156,7 +156,8 @@ In ottica futura il prodotto può essere migliorato inserendo nuove features, ad
 Questa funzionalità non è stata implementata per ridurre estremamente la configurazione e l'utilizzo del prodotto (secondo le esigenze del cliente)
 * Possibilità di configurare le informazioni e il logo della Palestra che vengono inseriti nella scheda, questo darebbe la possibilità di configurazione di un unico prodotto per diverse palestre
 * Possibilità di archiviazione in un DB delle immagini degli esercizi
-* Possibilità di accesso in ftp a un kit di immagini standard per un pacchetto base di esercizi 
+* Possibilità di accesso in ftp a un kit di immagini standard per un pacchetto base di esercizi
+* Possibilità di creare un numero maggiore di giorni di allenamento
 
 ## 8. Conclusioni
 Il prodotto si è dimostrato affidabile ed efficiente nel suo scopo.
