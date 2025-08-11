@@ -7,6 +7,11 @@ L'applicazione consente di generare schede in formato PDF complete di logo della
 
 L’obiettivo è fornire uno strumento semplice, veloce e personalizzabile per migliorare l'organizzazione del lavoro dei professionisti del fitness.
 
+Il presente documento rappresenta solo una breve panormaica non tecnica di quanto sviluppato, è possibile scaricare il paper completo al seguente link:
+[Link papaer tecnico](www.google.it)
+
+Per accedere al repository del progetto completo o avere ulteriori informazioni, contattare l'indirizzo email dell'autore che si trova nella sezione ["Autore"](#Autore).
+
 ## 2. Introduzione
 
 Nelle palestre, la gestione manuale delle schede di allenamento è ancora molto diffusa, causando:
