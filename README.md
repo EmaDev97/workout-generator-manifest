@@ -159,7 +159,7 @@ L'utente ha apprezzato tutte le funzionalità messe a disposizione del software,
 ## Autore
 **Emanuele S.**
  
-Sono un ingegnere informatico laureato con lode alla magistrale, con una solida formazione accademica e oltre due anni di esperienza professionale nel settore ICT. Ho lavorato su progetti complessi in ambito bancario e automotive, maturando competenze sia nello sviluppo software che nella sicurezza informatica, inoltre sono uno sviluppatore forense.
+Sono un ingegnere informatico laureato con lode alla magistrale, con una solida formazione accademica e un'esperienza esperienza professionale pluriennale nel settore ICT. Ho lavorato su progetti complessi in ambito bancario e automotive, maturando competenze sia nello sviluppo software che nella sicurezza informatica, inoltre sono uno sviluppatore forense.
 Durante la mia carriera ho sviluppato backend in Java sfruttando framework moderni come Spring Boot e Hibernate, progettando e integrando soluzioni di Identity and Access Management per garantire una gestione sicura e scalabile di ruoli, permessi e autenticazioni. Ho gestito database relazionali come MySQL e PostgreSQL, applicando metodologie Agile con team distribuiti e garantendo tempi di consegna rapidi. 
 Il mio lavoro mi ha portato a collaborare direttamente con i clienti, dalla raccolta dei requisiti alla definizione delle specifiche tecniche, fino alla consegna del progetto. 
 Questa esperienza mi ha permesso di affinare la comunicazione, il problem solving e la capacità di prendere in carico un progetto end-to-end, assicurando soluzioni robuste, scalabili e sicure.
