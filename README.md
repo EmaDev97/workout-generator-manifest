@@ -1,12 +1,12 @@
 # Sistema di Gestione Schede di Allenamento per Palestre
-## 1. Sommario
+## Sommario
 * [Abstract](#Abstract)
 * [Introduzione](#Introduzione)
-* [Architettura del sistema](#Architettura del sistema)
-* [Tecnologie utilizzate](#Tecnologie utilizzate)
-* [Funzionalità principali e breve panormaica del prodotto](#Funzionalità principali e breve panormaica del prodotto)
-* [Risultati e test](#Risultati e test)
-* [Estensioni future](#Estensioni future)
+* [Architettura del sistema](#Architettura-del-sistema)
+* [Tecnologie utilizzate](#Tecnologie-utilizzate)
+* [Funzionalità principali e breve panormaica del prodotto](#Funzionalità-principali-e-breve-panormaica-del-prodotto)
+* [Risultati e test](#Risultati-e-test)
+* [Estensioni future](#Estensioni-future)
 * [Conclusioni](#Conclusioni)
 * [Autore](#Autore)
 
