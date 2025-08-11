@@ -1,4 +1,14 @@
 # Sistema di Gestione Schede di Allenamento per Palestre
+## 1. Sommario
+* [Abstract](#Abstract)
+* [Introduzione](#Introduzione)
+* [Architettura del sistema](#Architettura del sistema)
+* [Tecnologie utilizzate](#Tecnologie utilizzate)
+* [Funzionalità principali e breve panormaica del prodotto](#Funzionalità principali e breve panormaica del prodotto)
+* [Risultati e test](#Risultati e test)
+* [Estensioni future](#Estensioni future)
+* [Conclusioni](#Conclusioni)
+* [Autore](#Autore)
 
 ## 1. Abstract
 
@@ -68,7 +78,7 @@ Di seguito verranno indicate tutte le tecnologie e le risorse che caratterizzano
 |Sistema Operativo| Tutti quelli con JVM
 ---
 
-## 5. Funzionalità principalià e breve panormaica del prodotto
+## 5. Funzionalità principali e breve panormaica del prodotto
 Il software permette di creare e gestire le schede di allenamento degli atleti di una palestra.
 Ogni scheda presenta diverse caratteristiche comuni ad altre schede (Informazioni e logo palestra) e caratteristiche diversificate sulla base dell'allenamento personalizzato per ogni atleta.
 Attualmente il prodotto permette di creare e gestire fino ad un massimo di tre giornate di allenamento per scheda senza limiti nel numero di esercizi per ognuno di essi.
@@ -164,7 +174,8 @@ L'utente ha apprezzato tutte le funzionalità messe a disposizione del software,
 ## Autore
 **Emanuele S.**
  
-Sono un ingegnere informatico laureato con lode alla magistrale, con una solida formazione accademica e un'esperienza esperienza professionale pluriennale nel settore ICT. Ho lavorato su progetti complessi in ambito bancario e automotive, maturando competenze sia nello sviluppo software che nella sicurezza informatica, inoltre sono uno sviluppatore forense.
+Sono un ingegnere informatico laureato con lode alla magistrale, con una solida formazione accademica e un'esperienza esperienza professionale pluriennale nel settore ICT. 
+Ho lavorato su progetti complessi in ambito bancario e automotive, maturando competenze sia nello sviluppo software che nella sicurezza informatica, inoltre sono uno sviluppatore forense.
 Durante la mia carriera ho sviluppato backend in Java sfruttando framework moderni come Spring Boot e Hibernate, progettando e integrando soluzioni di Identity and Access Management per garantire una gestione sicura e scalabile di ruoli, permessi e autenticazioni. Ho gestito database relazionali come MySQL e PostgreSQL, applicando metodologie Agile con team distribuiti e garantendo tempi di consegna rapidi. 
 Il mio lavoro mi ha portato a collaborare direttamente con i clienti, dalla raccolta dei requisiti alla definizione delle specifiche tecniche, fino alla consegna del progetto. 
 Questa esperienza mi ha permesso di affinare la comunicazione, il problem solving e la capacità di prendere in carico un progetto end-to-end, assicurando soluzioni robuste, scalabili e sicure.
