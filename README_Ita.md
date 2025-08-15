@@ -149,6 +149,7 @@ L'utente finale si ritiene soddisfatto del risultato, la creazione delle schede 
 Viene sottolineato come il prodotto sia di facile uso e intuizione da parte dell'utente finale (utente di esperienza tecnologica media/bassa). 
 A detta dell'utente finale, l'applicazione ha generato dei PDF perfettamente formattati e leggibili.
 L'utente non ha avuto necessità di supporto nella configurazione iniziale del prodotto, si è basato sulla documentazione nell'apposita finestra di informazioni.
+
 <img width="571" height="798" alt="image" src="https://github.com/user-attachments/assets/2db66124-0fa7-4e0e-87d7-1addfa10028d" />
 
 
