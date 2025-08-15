@@ -84,7 +84,7 @@ Currently, the product allows creating and managing up to three workout days per
 
 The product has an intuitive graphical interface and a window with usage instructions and configuration guidelines.  
 
-<img width="1117" height="774" alt="image" src="https://github.com/user-attachments/assets/660405fe-bfb9-44be-8727-695f552e87a4" />
+<img width="1402" height="965" alt="image" src="https://github.com/user-attachments/assets/f9ae4789-f108-47e9-8d4b-cf30ae1b398d" />
 Through the graphical interface, you can create the card, modify the characteristics of each inserted exercise (excluding the exercise name). These characteristics are divided into optional and mandatory:  
 * MANDATORY
 	* Number of sets and repetitions
