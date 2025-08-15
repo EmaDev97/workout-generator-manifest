@@ -150,6 +150,8 @@ It is emphasized that the product is easy to use and intuitive for the end user 
 According to the end user, the application generated perfectly formatted and readable PDFs.  
 The user did not require support for the initial product configuration and relied on the documentation provided in the information window.
 
+<img width="571" height="798" alt="image" src="https://github.com/user-attachments/assets/2db66124-0fa7-4e0e-87d7-1addfa10028d" />
+
 ## 7. Future extensions
 For the future, the product could be improved with new features, such as:
 * Storing generated cards in a database (e.g., SQL)  
