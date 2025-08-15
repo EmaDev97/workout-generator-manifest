@@ -1,185 +1,181 @@
-# Sistema di Gestione Schede di Allenamento per Palestre
-## Sommario
+# Workout Card Management System for Gyms
+## Summary
 * [Abstract](#Abstract)
-* [Introduzione](#Introduzione)
-* [Architettura del sistema](#Architettura-del-sistema)
-* [Tecnologie utilizzate](#Tecnologie-utilizzate)
-* [Funzionalità principali e breve panormaica del prodotto](#Funzionalità-principali-e-breve-panormaica-del-prodotto)
-* [Risultati e test](#Risultati-e-test)
-* [Estensioni future](#Estensioni-future)
-* [Conclusioni](#Conclusioni)
-* [Autore](#Autore)
+* [Introduction](#Introduction)
+* [System architecture](#System-architecture)
+* [Technologies used](#Technologies-used)
+* [Main features and brief product overview](#Main-features-and-brief-product-overview)
+* [Results and tests](#Results-and-tests)
+* [Future extensions](#Future-extensions)
+* [Conclusions](#Conclusions)
+* [Author](#Author)
 
 ## 1. Abstract
 
-Questo progetto implementa un'applicazione desktop in Java per la creazione, modifica e gestione di schede di allenamento per palestre e personal trainer.  
-L'applicazione consente di generare schede in formato PDF complete di logo della palestra, informazioni personalizzate sugli atleti e programmazione degli esercizi.
+This project implements a Java desktop application for creating, editing, and managing workout cards for gyms and personal trainers.  
+The application allows the generation of PDF cards complete with gym logo, personalized athlete information, and exercise scheduling.
 
-L’obiettivo è fornire uno strumento semplice, veloce e personalizzabile per migliorare l'organizzazione del lavoro dei professionisti del fitness.
+The goal is to provide a simple, fast, and customizable tool to improve the work organization of fitness professionals.
 
-Il presente documento rappresenta solo una breve panormaica non tecnica di quanto sviluppato, è possibile scaricare il paper completo al seguente link:<br>
-[Link papaer tecnico](https://github.com/EmaDev97/workout-generator-manifest/blob/main/test_paper.pdf)
+This document is only a brief non-technical overview of what was developed. The complete paper can be downloaded at the following link:<br>
+[Technical paper link](https://github.com/EmaDev97/workout-generator-manifest/blob/main/test_paper.pdf)
 
-Per accedere al repository del progetto completo o avere ulteriori informazioni, contattare l'indirizzo email dell'autore che si trova nella sezione ["Autore"](#Autore).
+To access the full project repository or for further information, please contact the author's email address found in the ["Author"](#Author) section.
 
-## 2. Introduzione
+## 2. Introduction
 
-Nelle palestre, la gestione manuale delle schede di allenamento è ancora molto diffusa, causando:
-- perdita di tempo nella stesura
-- informazioni sulle schede poco chiare 
-- mancanza di uniformità nella presentazione
+In gyms, manual management of workout cards is still very common, causing:
+- wasted time in drafting
+- unclear information on the cards
+- lack of uniformity in presentation
 
-Questo progetto propone una soluzione software, facile da usare e basata su tecnologie open source, che riduce i tempi di gestione e migliora la qualità della documentazione fornita ai clienti.
+This project proposes an easy-to-use software solution based on open-source technologies, which reduces management times and improves the quality of documentation provided to clients.
 
 ---
 
-## 3. Architettura del sistema
+## 3. System architecture
 
-L’applicazione è sviluppata in Java con interfaccia grafica (GUI) creata su Eclipse.  
-Il sistema è strutturato come segue:
+The application is developed in Java with a graphical user interface (GUI) created in Eclipse.  
+The system is structured as follows:
 
-- **Interfaccia Utente (GUI)**: consente l’inserimento e la modifica dei dati di allenamento (informazioni atleta, esercizi con relative informazioni).
-- **Gestione Dati**: strutture dati in Java per memorizzare esercizi, serie, ripetizioni e note.
-- **Generatore PDF**: modulo che utilizza una libreria Java per la creazione di schede stampabili con il logo della palestra.
-- **Sistema di Persistenza**: salvataggio delle schede in locale senza l'uso di DB in modo da essere più portatile e di semplice configurazione.
+- **User Interface (GUI)**: allows inserting and editing workout data (athlete information, exercises with related details).
+- **Data Management**: Java data structures to store exercises, sets, reps, and notes.
+- **PDF Generator**: module that uses a Java library to create printable cards with the gym logo.
+- **Persistence System**: saves cards locally without using a database to make the system more portable and easy to configure.
 
 ```mermaid
 sequenceDiagram
-    participant U as Utente
+    participant U as User
     participant G as GUI (Java)
-    participant D as Gestione Dati
-    participant DB as File Locale
-    participant P as Generatore PDF
+    participant D as Data Management
+    participant DB as Local File
+    participant P as PDF Generator
 
-    U ->> G: Crea/Modifica scheda di allenamento
-    G ->> D: Richiesta salvataggio scheda
-    D ->> DB: Salva scheda serializzata
-    Note right of DB: Persistenza su File locale (Scheda Serializzata)
-    U ->> G: Carica scheda esistente
-    G ->> D: Richiesta caricamento scheda
-    D ->> DB: Recupera scheda serializzata
-    DB -->> D: Restituisce dati scheda
-    D -->> G: Mostra scheda
-    G ->> P: Invia dati per generazione PDF
-    P -->> U: Restituisce PDF generato
+    U ->> G: Create/Edit workout card
+    G ->> D: Request to save card
+    D ->> DB: Save serialized card
+    Note right of DB: Persistence on local file (Serialized Card)
+    U ->> G: Load existing card
+    G ->> D: Request to load card
+    D ->> DB: Retrieve serialized card
+    DB -->> D: Return card data
+    D -->> G: Display card
+    G ->> P: Send data for PDF generation
+    P -->> U: Return generated PDF
 ```
 
+## 4. Technologies used
 
-## 4. Tecnologie utilizzate
+Below are the main technologies and resources used in this development
 
-Di seguito verranno indicate tutte le tecnologie e le risorse che caratterizzano principalmente questo sviluppo
-
-|COMPONENTE		|TECNOLOGIA
+|COMPONENT		|TECHNOLOGY
 |----------------|-------------------------------
-|  Linguaggio di sviluppo          |Java  
+| Development language          |Java  
 |IDE|Eclipse  |
 |Framework| WindowBuilder|
-|Generazione PDF|openPDF 2.0.3 (Libreria .jar)
-|Sistema Operativo| Tutti quelli con JVM
+|PDF Generation|openPDF 2.0.3 (.jar library)
+|Operating System| Any with JVM
 ---
 
-## 5. Funzionalità principali e breve panormaica del prodotto
-Il software permette di creare e gestire le schede di allenamento degli atleti di una palestra.
-Ogni scheda presenta diverse caratteristiche comuni ad altre schede (Informazioni e logo palestra) e caratteristiche diversificate sulla base dell'allenamento personalizzato per ogni atleta.
-Attualmente il prodotto permette di creare e gestire fino ad un massimo di tre giornate di allenamento per scheda senza limiti nel numero di esercizi per ognuno di essi.
+## 5. Main features and brief product overview
+The software allows creating and managing athletesâ€™ workout cards in a gym.  
+Each card has features common to other cards (gym information and logo) and customized features based on the athlete's personalized training program.  
+Currently, the product allows creating and managing up to three workout days per card with no limit on the number of exercises for each.
 
-Il prodotto si presenta con una veste grafica di facile intuizione e una finestra con le relative istruzioni sull'uso del prodotto e la sua configurazione.
+The product has an intuitive graphical interface and a window with usage instructions and configuration guidelines.  
+immagine()  
+Through the graphical interface, you can create the card, modify the characteristics of each inserted exercise (excluding the exercise name). These characteristics are divided into optional and mandatory:  
+* MANDATORY
+	* Number of sets and repetitions
+	* Rest time
+* OPTIONAL
+	* Superset (yes/no) and with which exercise
+	* Description
+
+Once the card is created and the general fields (athlete name and card goal) are filled in, it is possible to generate its schematic PDF version with illustrations.  
+The generated card includes:
+* Gym name (top center)
+* Gym logo (top right)
+* Gym information such as geographic location and ID code (top left)
+* Card information (top left, under gym info)
+* List of workout days with individual exercises (center)
+* Card ownership information (bottom)
+
+When the PDF is generated, a file representing the same serialized card is automatically generated. This process allows reloading previously created cards into the software.  
+In edit mode, you can load a local file representing a previously created card, make changes or updates, and save it again, generating a new PDF and serialized card file.
+
+Through a configuration screen, it is possible to define the paths used by the software to manage:
+* Log files
+* Destination folder for generated PDFs and image sources
+
+To meet the end user's needs, an interface explaining the first software configuration has been developed.  
 immagine()
-Tramite interfaccia grafica è possibile creare la scheda, modificare le caratteristiche di ogni esercizio inserito (ad esclusione del nome dell'esercizio), queste caratteristiche si dividono in opzionali e obbligatori:
-* OBBLIGATORI
-	* Numero serie e ripetizioni
-	* Tempo di riposo
-* OPZIONALI
-	* Super serie (si/no) e con quale esercizio
-	* Descrizione
 
-Una volta creata la scheda e compilati i campi generali (Nome atleta e obiettivo scheda), è possibile generare la sua versione in pdf schematica con tanto di illustrazioni.
-La scheda generata presenta:
-* Nome della palestra (in alto al centro)
-* Logo della palestra (in alto a destra)
-* Informazioni sulla palestra come posizione geografica, codice identificativo (in alto a sinistra)
-* Informazioni scheda (in alto a sinistra, sotto le informazioni della scheda)
-* Elenco delle giornate di allenamento con i singoli esercizi (parte centrale)
-* Informazioni sulla proprietà della scheda (in basso)
-
-Quando viene generato il PDF viene generato automaticamente anche un file che rappresenta la stessa scheda serializzata. Questo processo permette di poter ricaricare nel software schede create in precedenza.
-Accedendo in modalità modifica è possibile ricaricare il file in locale che rappresenta una scheda creata in precedenza, sarà a questo punto possibile apportare modifiche o aggiornamenti alla stessa ed effettuare un salvataggio che genererà un nuovo PDF e file di scheda serializzata.
-
-Tramite una schermata di configurazioni è possibile definire i path che rappresentano la posizione presa in considerazione dal software per gestire:
-* File di log
-* Cartella di destinazione pdf generati e fonte delle immagini
-
-Per venire in contro alle esigenze dell'utente finale è stata sviluppata un'interfaccia che spiega come effettuare la prima configurazione del software.
-immagine()
-
-Di seguito un riepilogo delle funzionalità offerte dal software:
-* Interfaccia grafica con bottoni azione
-* Possibilità di caricare nuovi esercizi
-* Creazione nuove schede
-* Caricamento e modifica schede esistenti
-* Gestione scheda (Max 3 giornate)
-	* Nome esercizio
-	* Numero ripetizioni
-	* Tempo di riposo
-	* Super serie (si/no)
- * Creazione nuove schede
-	* Logo palestra
-	* Informazioni palestra
-		 * Posizione geografica
-		  * C.F.
-	 * Informazioni Scheda
-		  * Nome atleta
-		  * Obiettivo
-* Creazione nuove schede
+Below is a summary of the software features:
+* Graphical interface with action buttons
+* Ability to load new exercises
+* Create new cards
+* Load and edit existing cards
+* Card management (Max 3 days)
+	* Exercise name
+	* Number of repetitions
+	* Rest time
+	* Superset (yes/no)
+ * Create new cards
+	* Gym logo
+	* Gym information
+		 * Geographic location
+		 * Tax code
+	 * Card information
+		  * Athlete name
+		  * Goal
+* Create new cards
   
-| Categoria                  | Funzionalità                                                                 | Note                                                                 |
-|----------------------------|-------------------------------------------------------------------------------|----------------------------------------------------------------------|
-| **Interfaccia**            | Interfaccia grafica intuitiva con pulsanti azione                             | Include finestra con istruzioni d’uso                                |
-| **Gestione esercizi**      | - Caricamento nuovi esercizi<br>- Modifica caratteristiche esercizi (serie, ripetizioni, tempo di riposo, super serie, descrizione) | Il nome dell’esercizio non è modificabile                            |
-| **Gestione schede**        | - Creazione nuove schede<br>- Modifica schede esistenti<br>- Max 4 giornate per scheda<br>- Nessun limite esercizi per giornata | Ogni giornata può contenere un numero illimitato di esercizi         |
-| **Dati palestra**          | - Logo palestra<br>- Posizione geografica<br>- Codice fiscale                 | Dati mostrati in intestazione PDF                                    |
-| **Dati scheda**            | - Nome atleta<br>- Obiettivo allenamento                                      | Dati riportati in intestazione PDF                                   |
-| **Esportazione**           | - Generazione PDF con illustrazioni<br>- Layout con intestazione, corpo e piè di pagina | PDF strutturato per stampa e facile lettura                          |
-| **Salvataggio**            | - Creazione file scheda serializzata<br>- Caricamento schede salvate in precedenza | Formato proprietario per garantire compatibilità con versioni future |
-| **Configurazioni**         | - Impostazione percorsi per file di log, PDF generati e immagini              | Configurazione guidata disponibile                                   |
-| **Guida**                  | - Istruzioni per la prima configurazione                                      | Contiene immagini illustrative                                       |
+| Category                  | Feature                                                                 | Notes                                                                 |
+|---------------------------|---------------------------------------------------------------------------|----------------------------------------------------------------------|
+| **Interface**             | Intuitive GUI with action buttons                                        | Includes usage instruction window                                    |
+| **Exercise management**   | - Load new exercises<br>- Edit exercise details (sets, reps, rest time, superset, description) | Exercise name cannot be modified                                     |
+| **Card management**       | - Create new cards<br>- Edit existing cards<br>- Max 4 workout days per card<br>- Unlimited exercises per day | Each day can contain unlimited exercises                             |
+| **Gym data**              | - Gym logo<br>- Geographic location<br>- Tax code                        | Data shown in PDF header                                             |
+| **Card data**             | - Athlete name<br>- Training goal                                        | Data shown in PDF header                                             |
+| **Export**                | - Generate PDF with illustrations<br>- Layout with header, body, and footer | PDF designed for print and easy reading                              |
+| **Save**                  | - Create serialized card file<br>- Load previously saved cards           | Proprietary format ensures compatibility with future versions       |
+| **Configurations**        | - Set paths for log files, generated PDFs, and images                    | Guided configuration available                                       |
+| **Guide**                 | - First configuration instructions                                      | Includes illustrative images                                         |
 ---
-## 6. Risultati e test
-L'utente finale si ritiene soddisfatto del risultato, la creazione delle schede risulta essere molto rapida e i tempi di esecuzione del prodotto (in tutte le sue funzionalità) sono irrilevanti (estremamente ridotti).
-Viene sottolineato come il prodotto sia di facile uso e intuizione da parte dell'utente finale (utente di esperienza tecnologica media/bassa). 
-A detta dell'utente finale, l'applicazione ha generato dei PDF perfettamente formattati e leggibili.
-L'utente non ha avuto necessità di supporto nella configurazione iniziale del prodotto, si è basato sulla documentazione nell'apposita finestra di informazioni.
 
-## 7. Estensioni future
-In ottica futura il prodotto può essere migliorato inserendo nuove features, ad esempio;
-* Archiviazione delle schede generate in un DB (es. SQL)
-Questa funzionalità non è stata implementata per ridurre estremamente la configurazione e l'utilizzo del prodotto (secondo le esigenze del cliente)
-* Possibilità di configurare le informazioni e il logo della Palestra che vengono inseriti nella scheda, questo darebbe la possibilità di configurazione di un unico prodotto per diverse palestre
-* Possibilità di archiviazione in un DB delle immagini degli esercizi
-* Possibilità di accesso in ftp a un kit di immagini standard per un pacchetto base di esercizi
-* Possibilità di creare un numero maggiore di giorni di allenamento
+## 6. Results and tests
+The end user is satisfied with the result. Card creation is very fast, and execution times for all product features are negligible (extremely short).  
+It is emphasized that the product is easy to use and intuitive for the end user (with medium/low technological experience).  
+According to the end user, the application generated perfectly formatted and readable PDFs.  
+The user did not require support for the initial product configuration and relied on the documentation provided in the information window.
 
-## 8. Conclusioni
-Il prodotto si è dimostrato affidabile ed efficiente nel suo scopo.
-L'utente ha apprezzato tutte le funzionalità messe a disposizione del software, altrettanto apprezzato è stata la tempistica di sviluppo dell'intero progetto compresa la documentazione tecnica (circa venti giorni compresi i meeting di review e le modifiche ai requisiti).
+## 7. Future extensions
+For the future, the product could be improved with new features, such as:
+* Storing generated cards in a database (e.g., SQL)  
+  This feature was not implemented to keep configuration and usage extremely simple (according to the client's needs).
+* Ability to configure the gym's information and logo inserted in the card, allowing the configuration of a single product for multiple gyms
+* Ability to store exercise images in a database
+* Ability to access via FTP a kit of standard images for a base set of exercises
+* Ability to create more training days
 
-## 9. Risorse
-* Possibilità di configurare le informazioni e il logo della Palestra che vengono inseriti nella scheda, questo darebbe la possibilità di configurazione di un unico prodotto per diverse palestre
-* [Documentazione Java](https://docs.oracle.com/javase/8/docs/api/)
-* [Documentazione OpenPdf](https://github.com/LibrePDF/OpenPDF)
+## 8. Conclusions
+The product proved to be reliable and efficient in its purpose.  
+The user appreciated all the software features and also the development time for the entire project, including technical documentation (about twenty days, including review meetings and requirement changes).
 
-## 8. Conclusioni
-Il prodotto si è dimostrato affidabile ed efficiente nel suo scopo.
-L'utente ha apprezzato tutte le funzionalità messe a disposizione del software, altrettanto apprezzato è stata la tempistica di sviluppo dell'intero progetto compresa la documentazione tecnica (circa venti giorni compresi i meeting di review e le modifiche ai requisiti).
+## 9. Resources
+* Ability to configure the gym's information and logo inserted in the card, allowing the configuration of a single product for multiple gyms
+* [Java Documentation](https://docs.oracle.com/javase/8/docs/api/)
+* [OpenPdf Documentation](https://github.com/LibrePDF/OpenPDF)
 
-## Autore
+## Author
 **Emanuele S.**
  
-Sono un ingegnere informatico laureato con lode alla magistrale, con una solida formazione accademica e un'esperienza esperienza professionale pluriennale nel settore ICT.<br>
-Ho lavorato su progetti complessi in ambito bancario e automotive, maturando competenze sia nello sviluppo software che nella sicurezza informatica, inoltre sono uno sviluppatore forense.<br>
-Durante la mia carriera ho sviluppato backend in Java sfruttando framework moderni come Spring Boot e Hibernate, progettando e integrando soluzioni di Identity and Access Management per garantire una gestione sicura e scalabile di ruoli, permessi e autenticazioni. Ho gestito database relazionali come MySQL e PostgreSQL, applicando metodologie Agile con team distribuiti e garantendo tempi di consegna rapidi. 
-Il mio lavoro mi ha portato a collaborare direttamente con i clienti, dalla raccolta dei requisiti alla definizione delle specifiche tecniche, fino alla consegna del progetto. 
-Questa esperienza mi ha permesso di affinare la comunicazione, il problem solving e la capacità di prendere in carico un progetto end-to-end, assicurando soluzioni robuste, scalabili e sicure.
+I am a computer engineer with a master's degree cum laude, with a solid academic background and several years of professional experience in the ICT sector.<br>
+I have worked on complex projects in the banking and automotive fields, gaining expertise in both software development and cybersecurity, and I am also a forensic developer.<br>
+During my career, I have developed Java backends using modern frameworks such as Spring Boot and Hibernate, designing and integrating Identity and Access Management solutions to ensure secure and scalable management of roles, permissions, and authentications. I have managed relational databases such as MySQL and PostgreSQL, applied Agile methodologies with distributed teams, and ensured fast delivery times.  
+My work has involved direct client interaction, from requirements gathering to defining technical specifications, up to project delivery.  
+This experience has allowed me to refine my communication, problem-solving skills, and the ability to take charge of a project end-to-end, ensuring robust, scalable, and secure solutions.
 
-**Contatti**
+**Contacts**  
 emanuele.sa.dev@outlook.com
