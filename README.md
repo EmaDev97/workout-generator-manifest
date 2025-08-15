@@ -18,7 +18,7 @@ The application allows the generation of PDF cards complete with gym logo, perso
 The goal is to provide a simple, fast, and customizable tool to improve the work organization of fitness professionals.
 
 This document is only a brief non-technical overview of what was developed. The complete paper can be downloaded at the following link:<br>
-[Technical paper link](https://github.com/EmaDev97/workout-generator-manifest/blob/main/test_paper.pdf)
+[Technical paper link](https://github.com/EmaDev97/workout-generator-manifest/blob/main/paper_ing.pdf)
 
 To access the full project repository or for further information, please contact the author's email address found in the ["Author"](#Author) section.
 
