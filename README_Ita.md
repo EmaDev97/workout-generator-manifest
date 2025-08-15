@@ -84,7 +84,8 @@ Ogni scheda presenta diverse caratteristiche comuni ad altre schede (Informazion
 Attualmente il prodotto permette di creare e gestire fino ad un massimo di tre giornate di allenamento per scheda senza limiti nel numero di esercizi per ognuno di essi.
 
 Il prodotto si presenta con una veste grafica di facile intuizione e una finestra con le relative istruzioni sull'uso del prodotto e la sua configurazione.
-<img width="1117" height="774" alt="image" src="https://github.com/user-attachments/assets/660405fe-bfb9-44be-8727-695f552e87a4" />
+
+<img width="1402" height="965" alt="image" src="https://github.com/user-attachments/assets/f9ae4789-f108-47e9-8d4b-cf30ae1b398d" />
 Tramite interfaccia grafica è possibile creare la scheda, modificare le caratteristiche di ogni esercizio inserito (ad esclusione del nome dell'esercizio), queste caratteristiche si dividono in opzionali e obbligatori:
 * OBBLIGATORI
 	* Numero serie e ripetizioni
