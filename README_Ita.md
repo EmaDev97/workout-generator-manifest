@@ -84,7 +84,7 @@ Ogni scheda presenta diverse caratteristiche comuni ad altre schede (Informazion
 Attualmente il prodotto permette di creare e gestire fino ad un massimo di tre giornate di allenamento per scheda senza limiti nel numero di esercizi per ognuno di essi.
 
 Il prodotto si presenta con una veste grafica di facile intuizione e una finestra con le relative istruzioni sull'uso del prodotto e la sua configurazione.
-immagine()
+<img width="1117" height="774" alt="image" src="https://github.com/user-attachments/assets/660405fe-bfb9-44be-8727-695f552e87a4" />
 Tramite interfaccia grafica è possibile creare la scheda, modificare le caratteristiche di ogni esercizio inserito (ad esclusione del nome dell'esercizio), queste caratteristiche si dividono in opzionali e obbligatori:
 * OBBLIGATORI
 	* Numero serie e ripetizioni
@@ -149,6 +149,8 @@ L'utente finale si ritiene soddisfatto del risultato, la creazione delle schede 
 Viene sottolineato come il prodotto sia di facile uso e intuizione da parte dell'utente finale (utente di esperienza tecnologica media/bassa). 
 A detta dell'utente finale, l'applicazione ha generato dei PDF perfettamente formattati e leggibili.
 L'utente non ha avuto necessità di supporto nella configurazione iniziale del prodotto, si è basato sulla documentazione nell'apposita finestra di informazioni.
+<img width="571" height="798" alt="image" src="https://github.com/user-attachments/assets/2db66124-0fa7-4e0e-87d7-1addfa10028d" />
+
 
 ## 7. Estensioni future
 In ottica futura il prodotto può essere migliorato inserendo nuove features, ad esempio;
