@@ -182,3 +182,6 @@ This experience has allowed me to refine my communication, problem-solving skill
 
 **Contacts**  
 emanuele.sa.dev@outlook.com
+
+
+<img width="371" height="598" alt="image" src="https://github.com/EmaDev97/workout-generator-manifest/blob/main/logoDevSfondo.png" />
