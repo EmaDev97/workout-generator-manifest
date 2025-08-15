@@ -186,3 +186,7 @@ Questa esperienza mi ha permesso di affinare la comunicazione, il problem solvin
 
 **Contatti**
 emanuele.sa.dev@outlook.com
+
+
+<img width="371" height="598" alt="image" src="https://github.com/EmaDev97/workout-generator-manifest/blob/main/logoDevSfondo.png" />
+
